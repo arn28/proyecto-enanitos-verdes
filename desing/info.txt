@@ -1,0 +1,20 @@
+- Menu
+- Intro (banner)
+
+- Biografia(blog)
+
+- albums
+
+- ecommer (merchandise)
+
+- Contacto (form) subscribirse
+
+- incrustar lista spotify
+y copyright
+
+
+* tipo fuente
+* paleta de colores
+	principal #34b745
+_______________________________
+* 

@@ -1,0 +1,584 @@
+/* Importamos la fuente a utilizar desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* weight 400 = regular */
+/* weight 700 = negrita */
+
+:root{
+    --verdePrincipal: #34b745;
+    --verdeHover: hsl(128, 56%, 26%);
+    --negroVerde: #061408;
+    --blancoVerde: #f2fff2;
+}
+
+*{
+    box-sizing: border-box; /*el tamano total del elemento incluido padding y border*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth; /*suaviza la trancision con el mouse al hacer clic en los menus*/
+    transition: all .3s ease;
+    color: var(--negroVerde);
+}
+
+
+html{
+    /* Por defecto el tamano de fuente es 16px, lo cambiamos para usar tamano relativo del body */
+    /*Cada 1rem = 1px*/
+	font-size: 6.25%
+}
+
+h2{
+    font-size: 32rem;
+    color: var(--verdePrincipal);
+    text-align: center;
+    padding: 48rem 0 24rem 0;
+}
+
+p,
+h3{
+    font-size: 14rem;
+}
+
+/* INICIO HEADER */
+header{
+    height: 88rem;
+    width: 100vw;
+    position: fixed; /*Mantenemos el menu fijo*/
+    top: 0; /*Pegado a la parte superior*/
+    background-color: var(--negroVerde);
+    box-shadow:0rem 2rem 8rem var(--verdePrincipal);
+    z-index: 9; /*Ayuda a que se muestre por encima de los demas elementos*/
+}
+
+.contenedorHeader{
+    height: inherit; /*obtiene la altura de su padre*/
+    max-width: 1348rem;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap; /*direction wrap*/
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedorHeader a{
+    margin: 0 8rem;
+    color: var(--blancoVerde);
+    text-decoration: none; /*quita el subrayado al enlace*/
+    font-size: 16rem;
+}
+
+.contenedorHeader a:hover{
+    color: var(--verdePrincipal);
+}
+
+.contenedorHeader .logo{
+    height: 48rem;
+}
+
+.contenedorHeader .logo:hover{
+    transform: scale(1.1); /*cambia su tamano*/
+}
+
+.contenedorHeader .redesSociales svg{
+    height: 28rem;
+}
+
+.contenedorHeader .redesSociales svg:hover{
+    stroke: var(--verdePrincipal);
+}
+/* FIN HEADER */
+
+/* INICIO BANER */
+#baner{
+    height: 812rem;
+    margin-top: 88rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/FotoGrupo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.marco{
+    height: 492rem;
+    width: 1096rem;
+    background-color: var(--negroVerde);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.marco .logo{
+    height: 104rem;
+}
+
+.marco .fotoGrupo{
+    height: 356rem;
+}
+/* FIN BANER */
+
+
+/* INICIO HISTORIA */
+#historia{
+    background-color: var(--negroVerde);
+    padding: 72rem 0 32rem;
+}
+
+#historia h3{
+    font-size: 32rem;
+    color: var(--verdeHover);
+    text-align: center;
+    padding: 48rem 0 24rem 0
+}
+
+.sec{
+    max-width: 90%;
+    display: flex;  
+    justify-content: space-between; /*espacio entre elementos*/
+    align-items: center; /*centrear en vertical*/
+    gap: 12px; /*espacio entre los elementos hijo*/
+    margin: 0 auto 24rem;
+}
+
+.sec p{
+    max-width: 60%;
+    color: var(--blancoVerde);
+}
+.sec img{
+    width: 300rem;
+    height: 180rem;
+    object-fit: cover; /*la imagen se ajusta al tamano dado*/
+
+}
+
+.sec svg{
+    stroke: var(--blancoVerde);
+}
+
+/* sobre nuestros albumes */
+
+.albumHistoria{
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.albumHistoria img{
+    width:500rem;
+}
+
+.albumHistoria .sec{
+    margin: auto;
+    margin-bottom: 24rem;
+}
+
+.albumHistoria .sec p{
+    max-width: 84%;
+}
+
+/* Muerte de Marciano */
+.muerteMarciano .sec p{
+    max-width: 40%;
+}
+
+.muerteMarciano .sec img{
+    width: 600rem;
+    height: 300rem;
+}
+/* FIN HISTORIA */
+
+
+/* INCIO DISCOGRAFIA */
+#discografia{
+    padding-top: 72rem;
+    padding-bottom: 48rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blancoVerde);
+}
+
+.contenedorDiscografia{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80rem; /*espacio entre los elmentos hijo*/
+}
+
+.contenedorDiscografia iframe{
+    width: 320rem;
+    height: 400rem;
+}
+
+.albums{
+    max-width: 600rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.albums div{
+    margin: 16rem;
+}
+
+.albums img{
+    height: 220rem;
+}
+
+.albums h3,
+.albums p{
+    color: var(--negroVerde);
+}
+
+#discografia>a{
+    height: 48rem;
+    width: 200rem;
+    text-align: center;
+    padding: 12rem;
+    margin-top: 24rem;
+    text-decoration: none; /*quita subrayado*/
+    font-size: 20rem;
+    background-color: var(--verdePrincipal);
+    color: var(--blancoVerde);
+    border-radius: 8rem;
+}
+
+#discografia>a:hover{
+    background-color: var(--verdeHover);
+}
+/* FIN DISCOGRAFIA */
+
+
+/* INICIO TIENDA */
+#tienda{
+    position: relative;
+    padding-top: 72rem;
+    padding-bottom: 48rem;
+    background: var(--negroVerde);
+}
+
+#tienda a {
+    height: 58rem;
+    width: 58rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /*Toma como referencia al padre para moverse entre las coordenadas*/
+    right: 80rem;
+    top: 112rem;
+    background: var(--verdePrincipal);
+    border-radius: 50%;
+}
+
+#tienda a:hover {
+    background: var(--verdeHover);
+}
+
+#tienda a svg{
+    height: 32rem;
+    stroke: var(--blancoVerde);
+}
+
+#tienda a svg:hover{
+    stroke: var(--negroVerde);
+}
+
+.page-content0 {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;/* pone el contenido espaciado de los bordes derecho y izquierdo por igual*/
+}
+
+.page-content0 .catalogo{
+    max-width: 48%;
+}
+
+.catalogo h2 {
+    color: var(--blancoVerde);
+    margin: 12rem;
+}
+
+.page-content {/**/
+    display: flex;/* distribucion de marcos*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+}
+
+.product-container {
+    height: 220rem;
+    width: 200rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2rem 4rem 0 var(--blancoVerde); /*cambio de color de productos,sombra.difuminado D A D A*/
+}
+
+.product-container:hover {
+    box-shadow: 0 8rem 16rem 0 var(--blancoVerde);/*cambio de color de productos,sombra.difuminado D A D A*/
+}
+
+.product-container div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-container p{
+    font-size: 24rem;
+    font-weight: 700; /*negrita*/
+    color: var(--verdePrincipal);
+}
+
+.product-container img {
+    width: 150rem; /*tamano de la imagen*/
+}
+
+.button-add { /* posicion tamaño y borde de los botnes*/
+    font-size: 16rem;
+    text-align: center;
+    border-radius: 8rem; /* bordes circulares */
+    padding: 10rem 20rem; /* espacio interno del boton */
+    color: var(--blancoVerde);
+    background-color: var(--verdePrincipal);
+    border: none;
+    cursor: pointer; /*Aparece un manito*/
+}
+
+.button-add:hover { /* configurancion de los colores del boton al pasar el mouse*/
+    background-color: var(--verdeHover);
+}
+/* FIN TIENDA */
+
+
+/* INICIO CONTACTO*/
+#contacto{
+    padding-top: 72rem;
+    padding-bottom: 84rem;
+    background-color: var(--blancoVerde);
+}
+ 
+.contenedor .form { 
+      background: var(--negroVerde);
+      max-width: 650rem;
+      margin: auto;
+      padding: 36rem;
+      border-radius: 4rem;    
+} 
+  
+.contenedor .form .form-label{ 
+      color: var(--blancoVerde);
+      font-size: 18rem;
+}
+  
+.contenedor .form .form-input, .form-textarea{ 
+      background: var(--blancoVerde);
+      border: none; /*Quita los bordes por defecto*/
+      outline: none; /*Quita los bordes al entrar al input*/
+      border-bottom: 4rem solid var(--verdePrincipal);
+      width: 100%;
+      padding: 12rem;
+      margin-bottom: 20rem;
+      margin-top: 8rem;
+      border-radius: 2rem;
+      color: var(--negroVerde);
+      font-size: 14rem;
+}
+  
+.contenedor .form .form-textarea { 
+      resize: vertical; /*Cambia de tamano solo en vertical*/
+      max-height: 150rem;
+      min-height: 50rem;
+}
+  
+.contenedor .form .boton{ 
+      width: 100%;
+      outline: none; /*Quita los bordes al entrar al input*/
+      background: var(--verdePrincipal);
+      font-size: 16rem;
+      border: none;
+      border-radius: 4rem;
+      color: var(--blancoVerde);
+      padding: 15rem 0;
+      cursor: pointer; /*muestra el puntero en forma de mano*/
+}
+  
+.contenedor .form .boton:hover { 
+      background: var(--verdeHover);
+}
+/* FIN CONTACTO */
+
+
+/* INICIO FOOTER */
+footer{
+    background-color: var(--verdePrincipal);
+    height: 80rem;
+    padding: 20rem 0;
+}
+
+footer p,
+footer span{
+    color: var(--blancoVerde);
+    text-align: center;
+}
+
+footer span{
+    font-weight: 700; /*negrita*/
+}
+/* FIN FOOTER */
+
+
+/* DISENO RESPONSIVO */
+
+/*Aplica las propiedades a partir del ancho de 1200px*/
+@media all and (max-width:1200px) {
+    /* cambiando aspecto de HISTORIA */
+    .sec p{
+        max-width: 40%;
+        color: var(--blancoVerde);
+    }
+
+    .albumHistoria{
+        flex-direction:column ;
+        gap: 24rem; /*espacio entre elementos hijo*/
+    }
+
+    .albumHistoria img{
+        width: 400rem;
+    }
+}
+
+/*Aplica las propiedades a partir del ancho de 990px*/
+@media all and (max-width:990px){
+    /* Cambiando aspecto de BANNER */
+    .contenedorHeader .logo{
+        height: 28rem;
+    }
+
+    .contenedorHeader .redesSociales svg{
+        height: 20rem;
+    }
+
+    .marco{
+        height: 350rem;
+        width: 90%;
+    }
+    
+    .marco .logo{
+        height: 20%;
+    }
+    
+    .marco .fotoGrupo{
+        height: 60%;
+    }
+
+    /* Cambiando aspecto de ultimo parrafo HISTORIA */
+
+    .muerteMarciano .sec{
+        flex-direction: column;
+    }
+    .muerteMarciano .sec p{        
+        max-width: 80%;
+        margin-bottom: 14px;
+    }
+}
+
+/*Aplica las propiedades a partir del ancho de 700px*/
+@media all and (max-width:700px){
+    /* cambiando el orden del menu y logo */
+
+    .contenedorHeader{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+
+    /* ocultando redes sociales */
+    .contenedorHeader .redesSociales{
+        display: none;
+    }
+    
+    /* modificando portada */
+    .marco .logo{
+        height: 14%;
+    }
+    
+    .marco .fotoGrupo{
+        height: 42%;
+    }
+
+    /* modificando imagenes de HISTORIA */
+    .sec img{
+        width: 200rem;
+        height: 150rem;
+    }
+}
+
+/*Aplica las propiedades a partir del ancho de 526px*/
+@media all and (max-width:526px){
+    /* Cambiando aspecto de BANNER */
+    .marco{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 80%;
+        width: 80%;
+    }
+
+    .marco .logo{
+        height: 12%;
+    }
+    
+    .marco .fotoGrupo{
+        height: 28%;
+    }
+
+    /* Cambiando aspecto de HISTORIA */
+    .sec{
+        justify-content: space-evenly;
+    }
+
+    .sec img{
+        display: none;
+    }
+
+    .sec p{
+        max-width: 70%;
+    }
+
+    .muerteMarciano .sec img{
+        display: block;
+        width: 80%;
+    }
+
+    .albumHistoria img {
+        width: 300rem;
+    }
+
+    /* Cambiando boton de TIENDA */
+    #tienda a {
+        height: 36rem;
+        width: 36rem;
+    }
+    #tienda a svg{
+        height: 18rem;
+
+    }
+}
+
+/*Aplica las propiedades a partir del ancho de 365px*/
+@media all and (max-width:365px){
+    /* Cambiando tamano del HTML */
+    html{
+        font-size: 4.25%
+    }
+
+}
